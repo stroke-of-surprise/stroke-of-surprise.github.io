@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Stroke of Surprise: Progressive Semantic Illusions in Vector Sketching">
+  <meta name="keywords" content="Vector Sketching, Semantic Illusions, SVG, Progressive Drawing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stroke of Surprise: Progressive Semantic Illusions in Vector Sketching</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Stroke of Surprise: Progressive Semantic Illusions in Vector Sketching</h1>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- arXiv Link -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="https://github.com/stroke-of-surprise/Stroke-Of-Surprise" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Gallery Link -->
+              <span class="link-block">
+                <a href="./pages/gallery.html" class="external-link button is-normal is-rounded is-link">
+                  <span class="icon">
+                      <i class="fas fa-images"></i>
+                  </span>
+                  <span>Gallery</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Video Section -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- Video Embed -->
+        <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+            <video 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;"
+              autoplay 
+              muted 
+              playsinline 
+              loop
+              controls>
+              <source src="./static/video/stroke_of_surprise_teaser.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        
+        <p class="has-text-centered" style="margin-top: 15px; font-style: italic; color: #666;">
+          We recommend watching the video with sound on
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Image Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Teaser Image -->
+      <img src="./static/images/teaser.jpg" alt="Teaser" style="width: 100%;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Stroke of Surprise</span> generates vector sketches that progressively reveal different semantic meanings as strokes are added.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Visual illusions traditionally rely on spatial manipulations such as multi-view consistency. In this work, we introduce Progressive Semantic Illusions, a novel vector sketching task where a single sketch undergoes a dramatic semantic transformation through the sequential addition of strokes. We present Stroke of Surprise, a generative framework that optimizes vector strokes to satisfy distinct semantic interpretations at different drawing stages. The core challenge lies in the "dual-constraint": initial prefix strokes must form a coherent object (e.g., a duck) while simultaneously serving as the structural foundation for a second concept (e.g., a sheep) upon adding delta strokes. To address this, we propose a sequence-aware joint optimization framework driven by a dual-branch Score Distillation Sampling (SDS) mechanism. Unlike sequential approaches that freeze the initial state, our method dynamically adjusts prefix strokes to discover a "common structural subspace" valid for both targets. Furthermore, we introduce a novel Overlay Loss that enforces spatial complementarity, ensuring structural integration rather than occlusion. Extensive experiments demonstrate that our method significantly outperforms state-of-the-art baselines in recognizability and illusion strength, successfully expanding visual anagrams from the spatial to the temporal dimension.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<!-- Method -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <div class="content">
+          <img src="./static/images/pipeline.png" alt="Method Pipeline" style="width: 100%;">
+          <p class="has-text-justified" style="margin-top: 15px;">
+            Our method optimizes a set of learnable stroke parameters, which are divided into <span style="color: #4A90D9;">prefix strokes S<sub>prefix</sub></span> and <span style="color: #E07B39;">delta strokes S<sub>delta</sub></span>. The optimization process involves two parallel branches. In the top branch, only the prefix strokes are rendered by a differentiable rasterizer to create a partial sketch (e.g., a rabbit). This sketch is then guided by a pre-trained, frozen text-to-image diffusion model using a prompt corresponding to the prefix (<code>"a rabbit"</code>), resulting in the prefix SDS loss ℒ<sub>SDS</sub><sup>prefix</sup>. In the bottom branch, the <span style="color: #5DAE8B;">full set of strokes</span> is rendered to create the complete sketch (e.g., a horse). This is guided by the same diffusion model using a prompt for the full object (<code>"a horse"</code>), resulting in the full SDS loss ℒ<sub>SDS</sub><sup>full</sup>. The total SDS guidance loss is the sum of these two terms ℒ<sub>SDS</sub>=ℒ<sub>SDS</sub><sup>prefix</sup>+ℒ<sub>SDS</sub><sup>full</sup>. Gradients from this total loss are backpropagated to update all learnable stroke parameters.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Examples Section: 2-Phase Illusions -->
+<section class="section" id="two-phase-illusions">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">2-Phase Illusions</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our method generates vector sketches that transform between two different semantic concepts. As strokes are progressively added, the sketch reveals a completely different subject.
+          </p>
+        </div>
+
+        <!-- 2-Phase SVG Gallery with Pagination -->
+        <div class="svg-gallery-container" id="two-phase-gallery">
+          <div class="svg-gallery-wrapper" id="twoPhaseWrapper">
+            <!-- SVGs will be populated by JavaScript -->
+          </div>
+          
+          <div class="gallery-pagination">
+            <button class="gallery-nav-btn" id="twoPhasePrev" aria-label="Previous page">◀</button>
+            <span class="gallery-page-info" id="twoPhasePageInfo">1 / 1</span>
+            <button class="gallery-nav-btn" id="twoPhaseNext" aria-label="Next page">▶</button>
+          </div>
+        </div>
+
+        <div class="has-text-centered" style="margin-top: 25px;" id="two-phase-gallery-btn">
+          <a href="./pages/2-phase-gallery.html" class="button is-rounded is-medium gallery-btn">
+            <span class="icon">
+              <i class="fas fa-images"></i>
+            </span>
+            <span>View More in Gallery</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Examples Section: 3-Phase Illusions -->
+<section class="section" id="three-phase-illusions">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">3-Phase Illusions</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our approach can also generate sketches that transition through three different semantic concepts, creating even more surprising visual transformations.
+          </p>
+        </div>
+
+        <!-- 3-Phase SVG Gallery with Pagination -->
+        <div class="svg-gallery-container" id="three-phase-gallery">
+          <div class="svg-gallery-wrapper svg-gallery-wrapper-3col" id="threePhaseWrapper">
+            <!-- SVGs will be populated by JavaScript -->
+          </div>
+          
+          <div class="gallery-pagination">
+            <button class="gallery-nav-btn" id="threePhasePrev" aria-label="Previous page">◀</button>
+            <span class="gallery-page-info" id="threePhasePageInfo">1 / 1</span>
+            <button class="gallery-nav-btn" id="threePhaseNext" aria-label="Next page">▶</button>
+          </div>
+        </div>
+
+        <div class="has-text-centered" style="margin-top: 25px;" id="three-phase-gallery-btn">
+          <a href="./pages/3-phase-gallery.html" class="button is-rounded is-medium gallery-btn">
+            <span class="icon">
+              <i class="fas fa-images"></i>
+            </span>
+            <span>View More in Gallery</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Optimization Process Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Optimization Process</h2>
+        <div class="content has-text-justified">
+          <p>
+            Visualizing the optimization process of our method. The strokes are progressively optimized to create semantic illusions.
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+            <img src="./static/illusions/optimization_animation.gif" alt="Optimization Animation" style="width: 100%;">
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="./static/illusions/optimization_animation2.gif" alt="Optimization Animation 2" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- B-spline Results Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">B-spline Illusions</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our method can also generate B-spline representations, creating smooth and natural-looking vector sketches.
+          </p>
+        </div>
+
+        <!-- B-spline Gallery with Pagination -->
+        <div class="svg-gallery-container" id="bspline-gallery">
+          <div class="svg-gallery-wrapper svg-gallery-wrapper-3col" id="bsplineWrapper">
+            <!-- SVGs will be populated by JavaScript -->
+          </div>
+          
+          <div class="gallery-pagination">
+            <button class="gallery-nav-btn" id="bsplinePrev" aria-label="Previous page">◀</button>
+            <span class="gallery-page-info" id="bsplinePageInfo">1 / 1</span>
+            <button class="gallery-nav-btn" id="bsplineNext" aria-label="Next page">▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Vector Graph Results Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Vector Graph Illusions</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our method also supports vector graph representations, creating structured and detailed vector sketches.
+          </p>
+        </div>
+
+        <!-- Vector Graph Gallery with Pagination -->
+        <div class="svg-gallery-container" id="vector-graph-gallery">
+          <div class="svg-gallery-wrapper svg-gallery-wrapper-3col" id="vectorGraphWrapper">
+            <!-- Images will be populated by JavaScript -->
+          </div>
+          
+          <div class="gallery-pagination">
+            <button class="gallery-nav-btn" id="vectorGraphPrev" aria-label="Previous page">◀</button>
+            <span class="gallery-page-info" id="vectorGraphPageInfo">1 / 1</span>
+            <button class="gallery-nav-btn" id="vectorGraphNext" aria-label="Next page">▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BibTeX Section -->
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <div class="bibtex-container">
+      <button class="copy-btn" onclick="copyBibtex()">
+        <i class="fas fa-copy"></i> Copy
+      </button>
+      <pre><code id="bibtex-code">@article{strokeofsurprise2025,
+  author    = {Anonymous},
+  title     = {Stroke of Surprise: Progressive Semantic Illusions in Vector Sketching},
+  journal   = {TODO: Venue},
+  year      = {2025},
+}</code></pre>
+    </div>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+            If you want to reuse this source code, please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+// SVG Gallery class
+class SVGGallery {
+  constructor(data, basePath, wrapperId, prevBtnId, nextBtnId, pageInfoId, itemsPerPage = 6, phases = 2, fileExtension = '.svg') {
+    this.data = data;
+    this.basePath = basePath;
+    this.itemsPerPage = itemsPerPage;
+    this.phases = phases;
+    this.fileExtension = fileExtension;
+    this.currentPage = 0;
+    this.totalPages = Math.ceil(data.length / itemsPerPage);
+    this.isAnimating = false;
+    
+    this.wrapper = document.getElementById(wrapperId);
+    this.prevBtn = document.getElementById(prevBtnId);
+    this.nextBtn = document.getElementById(nextBtnId);
+    this.pageInfo = document.getElementById(pageInfoId);
+    
+    this.init();
+  }
+  
+  init() {
+    this.renderAllPages();
+    this.setupEventListeners();
+    this.updateButtons();
+    this.updatePageInfo();
+  }
+  
+  setupEventListeners() {
+    this.prevBtn.addEventListener('click', () => this.prevPage());
+    this.nextBtn.addEventListener('click', () => this.nextPage());
+  }
+  
+  renderAllPages() {
+    let html = '';
+    const previewClass = this.phases === 3 ? 'svg-preview-3phase' : 'svg-preview-2phase';
+    
+    for (let page = 0; page < this.totalPages; page++) {
+      const start = page * this.itemsPerPage;
+      const end = Math.min(start + this.itemsPerPage, this.data.length);
+      const items = this.data.slice(start, end);
+      
+      html += '<div class="svg-gallery-grid" style="min-width: 100%; flex-shrink: 0;">';
+      
+      items.forEach(item => {
+        const img1Path = `${this.basePath}${item.folder}/sketch_p1${this.fileExtension}`;
+        const img2Path = `${this.basePath}${item.folder}/sketch_p2${this.fileExtension}`;
+        const img3Path = this.phases === 3 ? `${this.basePath}${item.folder}/sketch_p3${this.fileExtension}` : '';
+        
+        html += `
+          <div class="svg-gallery-item">
+            <div class="${previewClass}">
+              <img src="${img1Path}" alt="Phase 1">
+              <img src="${img2Path}" alt="Phase 2">
+              ${this.phases === 3 ? `<img src="${img3Path}" alt="Phase 3">` : ''}
+            </div>
+            <p>${item.label}</p>
+          </div>
+        `;
+      });
+      
+      const emptySlots = this.itemsPerPage - items.length;
+      for (let i = 0; i < emptySlots; i++) {
+        html += `<div class="svg-gallery-item" style="visibility: hidden;"><div class="${previewClass}"></div><p>&nbsp;</p></div>`;
+      }
+      
+      html += '</div>';
+    }
+    
+    this.wrapper.innerHTML = html;
+  }
+  
+  updatePageInfo() {
+    this.pageInfo.textContent = `${this.currentPage + 1} / ${this.totalPages}`;
+  }
+  
+  updateButtons() {
+    this.prevBtn.disabled = this.currentPage === 0;
+    this.nextBtn.disabled = this.currentPage >= this.totalPages - 1;
+  }
+  
+  slideTo(page) {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    
+    this.currentPage = page;
+    this.wrapper.style.transform = `translateX(-${page * 100}%)`;
+    this.updateButtons();
+    this.updatePageInfo();
+    
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 500);
+  }
+  
+  prevPage() {
+    if (this.currentPage > 0 && !this.isAnimating) {
+      this.slideTo(this.currentPage - 1);
+    }
+  }
+  
+  nextPage() {
+    if (this.currentPage < this.totalPages - 1 && !this.isAnimating) {
+      this.slideTo(this.currentPage + 1);
+    }
+  }
+}
+
+// Load config and initialize all components
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('./static/js/gallery-config.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(config => {
+      // Initialize 2-phase SVG gallery
+      if (config['svg-2-phase'] && config['svg-2-phase'].folders.length > 0) {
+        new SVGGallery(
+          config['svg-2-phase'].folders,
+          config['svg-2-phase'].basePath,
+          'twoPhaseWrapper', 'twoPhasePrev', 'twoPhaseNext', 'twoPhasePageInfo',
+          6, 2
+        );
+      }
+      
+      // Initialize 3-phase SVG gallery
+      if (config['svg-3-phase'] && config['svg-3-phase'].folders.length > 0) {
+        new SVGGallery(
+          config['svg-3-phase'].folders,
+          config['svg-3-phase'].basePath,
+          'threePhaseWrapper', 'threePhasePrev', 'threePhaseNext', 'threePhasePageInfo',
+          3, 3
+        );
+      }
+      
+      // Initialize B-spline gallery (using PNG files, 3 per row like 3-phase)
+      if (config['svg-bspline'] && config['svg-bspline'].folders.length > 0) {
+        new SVGGallery(
+          config['svg-bspline'].folders,
+          config['svg-bspline'].basePath,
+          'bsplineWrapper', 'bsplinePrev', 'bsplineNext', 'bsplinePageInfo',
+          3, 2, '.png'
+        );
+      }
+      
+      // Initialize Vector Graph gallery (using PNG files, 3 per row like 3-phase)
+      if (config['svg-vector-graph'] && config['svg-vector-graph'].folders.length > 0) {
+        new SVGGallery(
+          config['svg-vector-graph'].folders,
+          config['svg-vector-graph'].basePath,
+          'vectorGraphWrapper', 'vectorGraphPrev', 'vectorGraphNext', 'vectorGraphPageInfo',
+          3, 2, '.png'
+        );
+      }
+    })
+    .catch(error => {
+      console.error('Failed to load gallery config:', error);
+    });
+});
+</script>
+
+</body>
+</html>
