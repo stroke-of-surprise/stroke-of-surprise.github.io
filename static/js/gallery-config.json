@@ -1,0 +1,184 @@
+{
+  "2-phase": {
+    "basePath": "../static/illusions/gallery/2-phase/",
+    "videos": [
+      "(1)pig+angel-25.mp4",
+      "(2)chicken+monkey-6.mp4",
+      "(3)duck+sheep-13.mp4",
+      "(4)swan+hamburger-30.mp4",
+      "(5)rabbit+Einstein-9.mp4",
+      "(6)rabbit+elephant-8.mp4",
+      "(7)rabbit+horse-55.mp4",
+      "(8)rabbit+elephant-16.mp4",
+      "(9)owl+angel-23.mp4",
+      "(10)chicken+monkey-11.mp4",
+      "(11)bear+cat-28.mp4",
+      "(12)chicken+dog-16.mp4",
+      "(13)cow+angel-18.mp4",
+      "(14)dolphin+peacock-7.mp4",
+      "(15)lighthouse+firefighter-4.mp4",
+      "(16)fox+cow-15.mp4",
+      "(17)koala+horse-7.mp4",
+      "(18)sheep+pig-10.mp4",
+      "(19)dog+detective-13.mp4",
+      "(20)flamingo+giraffe-3.mp4",
+      "apple+pig-19.mp4",
+      "bear+horse-66.mp4",
+      "chicken+angel-1.mp4",
+      "chicken+angel-3.mp4",
+      "chicken+monkey-19.mp4",
+      "chicken+monkey-5.mp4",
+      "chicken+pig-9.mp4",
+      "child+cat-1.mp4",
+      "cow+angel-3.mp4",
+      "donkey+pig-4.mp4",
+      "duck+cow-5.mp4",
+      "horse+monkey-9.mp4",
+      "penguin+cat-25.mp4",
+      "plushbear+sheep-4.mp4",
+      "rabbit+chicken-10.mp4",
+      "rabbit+elephant-13.mp4",
+      "rabbit+giraffe-13.mp4",
+      "rabbit+greek_statue-20.mp4",
+      "rabbit+greek_statue-8.mp4",
+      "rabbit+horse-17.mp4",
+      "rabbit+pig-20.mp4",
+      "sheep+peacock-30.mp4"
+    ]
+  },
+  "3-phase": {
+    "basePath": "../static/illusions/gallery/3-phase/",
+    "videos": [
+      "(0)apple+chicken+angel-10.mp4",
+      "(1)apple+rabbit+pig-8.mp4",
+      "(2)horse+plushbear+chef-26.mp4",
+      "(3)apple+sheep+Einstein-9.mp4",
+      "apple+rabbit+pig-50.mp4",
+      "pig+rabbit+angel-29.mp4",
+      "rabbit+cow+greek_statue-23.mp4"
+    ]
+  },
+  "optimization": {
+    "basePath": "../static/illusions/gallery/optimization/",
+    "videos": [
+      "(1)pig+angel-25.mp4",
+      "(2)chicken+monkey-6.mp4",
+      "(3)duck+sheep-13.mp4",
+      "(4)swan+hamburger-30.mp4",
+      "(5)rabbit+Einstein-9.mp4",
+      "(6)rabbit+elephant-8.mp4",
+      "(7)rabbit+horse-55.mp4",
+      "(8)rabbit+elephant-16.mp4",
+      "(9)owl+angel-23.mp4",
+      "(10)chicken+monkey-11.mp4",
+      "(11)bear+cat-28.mp4",
+      "(12)chicken+dog-16.mp4",
+      "(13)cow+angel-18.mp4",
+      "(14)dolphin+peacock-7.mp4",
+      "(15)lighthouse+firefighter-4.mp4",
+      "(16)fox+cow-15.mp4",
+      "(17)koala+horse-7.mp4",
+      "(18)sheep+pig-10.mp4",
+      "(19)dog+detective-13.mp4",
+      "(20)flamingo+giraffe-3.mp4",
+      "horse+monkey-9.mp4",
+      "koala+horse-7.mp4"
+    ]
+  },
+  "svg-2-phase": {
+    "basePath": "./static/illusions/bezier-cruve/2-phase/",
+    "folders": [
+      {
+        "folder": "chicken+monkey-6",
+        "label": "Chicken → Monkey"
+      },
+      {
+        "folder": "duck+sheep-13",
+        "label": "Duck → Sheep"
+      },
+      {
+        "folder": "pig+angel-25",
+        "label": "Pig → Angel"
+      },
+      {
+        "folder": "rabbit+Einstein-9",
+        "label": "Rabbit → Einstein"
+      },
+      {
+        "folder": "rabbit+elephant-8",
+        "label": "Rabbit → Elephant"
+      },
+      {
+        "folder": "rabbit+horse-55",
+        "label": "Rabbit → Horse"
+      },
+      {
+        "folder": "swan+hamburger-30",
+        "label": "Swan → Hamburger"
+      }
+    ]
+  },
+  "svg-3-phase": {
+    "basePath": "./static/illusions/bezier-cruve/3-phase/",
+    "folders": [
+      {
+        "folder": "apple+chicken+angel-10",
+        "label": "Apple → Chicken → Angel"
+      },
+      {
+        "folder": "apple+rabbit+pig-8",
+        "label": "Apple → Rabbit → Pig"
+      },
+      {
+        "folder": "horse+plushbear+chef-26",
+        "label": "Horse → Plushbear → Chef"
+      }
+    ]
+  },
+  "svg-bspline": {
+    "basePath": "./static/illusions/bspline/",
+    "folders": [
+      {
+        "folder": "a rabbit+a horse-10",
+        "label": "A Rabbit → A Horse"
+      },
+      {
+        "folder": "chicken+monkey-25",
+        "label": "Chicken → Monkey"
+      },
+      {
+        "folder": "rabbit+elephant-4",
+        "label": "Rabbit → Elephant"
+      },
+      {
+        "folder": "rabbit+horse-18",
+        "label": "Rabbit → Horse"
+      }
+    ]
+  },
+  "svg-vector-graph": {
+    "basePath": "./static/illusions/vector-graph/",
+    "folders": [
+      {
+        "folder": "(1)rabbit+horse-4",
+        "label": "Rabbit → Horse"
+      },
+      {
+        "folder": "(2)pikachu+sunflower-17",
+        "label": "Pikachu → Sunflower"
+      },
+      {
+        "folder": "(3)penguin+monkey-12",
+        "label": "Penguin → Monkey"
+      },
+      {
+        "folder": "pikachu+sunflower-22",
+        "label": "Pikachu → Sunflower"
+      },
+      {
+        "folder": "rabbit+horse-17",
+        "label": "Rabbit → Horse"
+      }
+    ]
+  }
+}
