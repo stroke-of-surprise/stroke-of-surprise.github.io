@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stroke of Surprise - Gallery</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/bulma.min.css">
+    <link rel="stylesheet" href="../static/css/gallery.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            animation: fadeIn 0.4s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .publication-title {
+            font-family: 'Google Sans', sans-serif;
+        }
+        /* Category cards */
+        .categories-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .category-card {
+            display: block;
+            width: 280px;
+            padding: 30px 20px;
+            background: #fafafa;
+            border: 2px solid #e0e0e0;
+            border-radius: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: #333;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* SVG preview for 2-phase */
+        .svg-preview {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            background: #fff;
+            border-radius: 12px;
+        }
+
+        .svg-preview img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .svg-preview img:first-child {
+            animation: alternate1 4s ease-in-out infinite;
+        }
+
+        .svg-preview img:last-child {
+            animation: alternate2 4s ease-in-out infinite;
+        }
+
+        @keyframes alternate1 {
+            0%, 45% { opacity: 1; }
+            50%, 95% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes alternate2 {
+            0%, 45% { opacity: 0; }
+            50%, 95% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* SVG preview for 3-phase */
+        .svg-preview-3 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            background: #fff;
+            border-radius: 12px;
+        }
+
+        .svg-preview-3 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            opacity: 0;
+        }
+
+        .svg-preview-3 img:nth-child(1) {
+            animation: tri1 6s ease-in-out infinite;
+        }
+
+        .svg-preview-3 img:nth-child(2) {
+            animation: tri2 6s ease-in-out infinite;
+        }
+
+        .svg-preview-3 img:nth-child(3) {
+            animation: tri3 6s ease-in-out infinite;
+        }
+
+        @keyframes tri1 {
+            0%, 30% { opacity: 1; }
+            33%, 97% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes tri2 {
+            0%, 30% { opacity: 0; }
+            33%, 63% { opacity: 1; }
+            66%, 100% { opacity: 0; }
+        }
+
+        @keyframes tri3 {
+            0%, 63% { opacity: 0; }
+            66%, 97% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* SVG preview for optimization */
+        .svg-preview-opt {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            background: #fff;
+            border-radius: 12px;
+        }
+
+        .svg-preview-opt img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+        }
+
+        .svg-preview-opt img.active {
+            opacity: 1;
+        }
+
+        .category-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #eee;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover .category-badge {
+            background: #333;
+            color: white;
+        }
+
+        .arrow-icon {
+            display: inline-block;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover .arrow-icon {
+            transform: translateX(3px);
+        }
+        
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 25px 0;
+            padding: 12px 24px;
+            background: #f5f5f5;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .back-link:hover {
+            background: #e8e8e8;
+            color: #333;
+        }
+
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover svg {
+            transform: translateX(-3px);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Stroke of Surprise: Progressive Semantic Illusions in Vector Sketching</h1>
+                        <p class="subtitle is-4" style="color: #666; margin-top: 10px;">Gallery</p>
+                        
+                        <a href="../index.html" class="back-link">
+                            <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                            Back to Project Page
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container is-max-desktop">
+            <div class="categories-container" style="margin-top: 0;">
+            <a href="2-phase-gallery.html" class="category-card">
+                <div class="svg-preview">
+                    <img src="../static/illusions/gallery/2phase_p1.svg" alt="Phase 1">
+                    <img src="../static/illusions/gallery/2phase_p2.svg" alt="Phase 2">
+                </div>
+                <div class="category-title">2-Phase</div>
+                <span class="category-badge" id="badge-2phase">-- videos <span class="arrow-icon">→</span></span>
+            </a>
+
+            <a href="3-phase-gallery.html" class="category-card">
+                <div class="svg-preview-3">
+                    <img src="../static/illusions/gallery/3phase_p1.svg" alt="Phase 1">
+                    <img src="../static/illusions/gallery/3phase_p2.svg" alt="Phase 2">
+                    <img src="../static/illusions/gallery/3phase_p3.svg" alt="Phase 3">
+                </div>
+                <div class="category-title">3-Phase</div>
+                <span class="category-badge" id="badge-3phase">-- videos <span class="arrow-icon">→</span></span>
+            </a>
+
+            <a href="optimization-gallery.html" class="category-card">
+                <div class="svg-preview-opt" id="optPreview">
+                    <!-- SVG images will be loaded by JavaScript -->
+                </div>
+                <div class="category-title">Optimization</div>
+                <span class="category-badge" id="badge-optimization">View process <span class="arrow-icon">→</span></span>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Load video counts from JSON config
+        fetch('../static/js/gallery-config.json')
+            .then(response => response.json())
+            .then(config => {
+                document.getElementById('badge-2phase').innerHTML = `${config['2-phase'].videos.length} videos <span class="arrow-icon">→</span>`;
+                document.getElementById('badge-3phase').innerHTML = `${config['3-phase'].videos.length} videos <span class="arrow-icon">→</span>`;
+                document.getElementById('badge-optimization').innerHTML = `${config['optimization'].videos.length} videos <span class="arrow-icon">→</span>`;
+            })
+            .catch(err => console.error('Failed to load gallery config:', err));
+        
+        // Dynamically load optimization SVGs
+        (function() {
+            const container = document.getElementById('optPreview');
+            const basePath = '../static/illusions/gallery/optimization/svgs/';
+            const start = 0, end = 2000, step = 100;
+            
+            for (let i = start; i <= end; i += step) {
+                const num = String(i).padStart(4, '0');
+                const img = document.createElement('img');
+                img.src = `${basePath}iter_${num}_group.svg`;
+                img.alt = `iter ${i}`;
+                if (i === start) img.classList.add('active');
+                container.appendChild(img);
+            }
+            
+            const images = container.querySelectorAll('img');
+            let current = 0;
+            
+            setInterval(() => {
+                images[current].classList.remove('active');
+                current = (current + 1) % images.length;
+                images[current].classList.add('active');
+            }, 100);
+        })();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stroke of Surprise - Optimization Gallery</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <div class="page-title">Stroke of Surprise</div>
+        <div class="page-subtitle">Optimization Process Gallery</div>
+
+        <a href="../index.html" class="back-link">
+            <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Back to Project Page
+        </a>
+
+        <div class="gallery-video-container">
+            <div class="gallery-video-title" id="galleryVideoTitle">Loading...</div>
+            
+            <div class="gallery-video-wrapper">
+                <video id="galleryVideo" controls autoplay muted playsinline>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="gallery-carousel-controls">
+                <button class="gallery-nav-btn" id="galleryPrevBtn" aria-label="Previous video">◀</button>
+                
+                <div class="gallery-counter">
+                    <span class="current" id="galleryCurrentNum">1</span> / <span id="galleryTotalNum">0</span>
+                </div>
+                
+                <button class="gallery-nav-btn" id="galleryNextBtn" aria-label="Next video">▶</button>
+            </div>
+
+            <div class="gallery-progress-bar">
+                <div class="gallery-progress-fill" id="galleryProgressFill"></div>
+            </div>
+
+            <div class="gallery-thumbnail-section">
+                <div class="gallery-keyboard-hint">
+                    Use <kbd>←</kbd> <kbd>→</kbd> arrow keys to navigate
+                </div>
+                <div class="gallery-thumbnail-strip" id="galleryThumbnailStrip"></div>
+            </div>
+        </div>
+    </center>
+
+    <script src="../static/js/gallery.js"></script>
+    <script>
+        // Initialize carousel - loads video list from JSON config
+        new GalleryCarousel('optimization', 2);
+    </script>
+</body>
+</html>
