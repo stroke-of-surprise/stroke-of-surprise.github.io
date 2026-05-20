@@ -89,32 +89,76 @@
     "basePath": "./static/illusions/bezier-cruve/2-phase/",
     "folders": [
       {
-        "folder": "chicken+monkey-6",
+        "folder": "(1)chicken+monkey-6",
         "label": "Chicken → Monkey"
       },
       {
-        "folder": "duck+sheep-13",
+        "folder": "(2)duck+sheep-13",
         "label": "Duck → Sheep"
       },
       {
-        "folder": "pig+angel-25",
+        "folder": "(3)pig+angel-25",
         "label": "Pig → Angel"
       },
       {
-        "folder": "rabbit+Einstein-9",
+        "folder": "(4)rabbit+Einstein-9",
         "label": "Rabbit → Einstein"
       },
       {
-        "folder": "rabbit+elephant-8",
+        "folder": "(5)rabbit+elephant-8",
         "label": "Rabbit → Elephant"
       },
       {
-        "folder": "rabbit+horse-55",
+        "folder": "(6)rabbit+horse-55",
         "label": "Rabbit → Horse"
       },
       {
-        "folder": "swan+hamburger-30",
+        "folder": "(7)swan+hamburger-30",
         "label": "Swan → Hamburger"
+      },
+      {
+        "folder": "(9)owl+angel-23",
+        "label": "Owl → Angel"
+      },
+      {
+        "folder": "(11)bear+cat-28",
+        "label": "Bear → Cat"
+      },
+      {
+        "folder": "(12)chicken+dog-16",
+        "label": "Chicken → Dog"
+      },
+      {
+        "folder": "(14)dolphin+peacock-7",
+        "label": "Dolphin → Peacock"
+      },
+      {
+        "folder": "(15)horse+monkey-9",
+        "label": "Horse → Monkey"
+      },
+      {
+        "folder": "(16)lighthouse+firefighter-4",
+        "label": "Lighthouse → Firefighter"
+      },
+      {
+        "folder": "(17)fox+cow-15",
+        "label": "Fox → Cow"
+      },
+      {
+        "folder": "(18)koala+horse-7",
+        "label": "Koala → Horse"
+      },
+      {
+        "folder": "(20)sheep+pig-10",
+        "label": "Sheep → Pig"
+      },
+      {
+        "folder": "(21)dog+detective-13",
+        "label": "Dog → Detective"
+      },
+      {
+        "folder": "(22)flamingo+giraffe-21",
+        "label": "Flamingo → Giraffe"
       }
     ]
   },
@@ -122,16 +166,28 @@
     "basePath": "./static/illusions/bezier-cruve/3-phase/",
     "folders": [
       {
-        "folder": "apple+chicken+angel-10",
+        "folder": "(1)apple+chicken+angel-10",
         "label": "Apple → Chicken → Angel"
       },
       {
-        "folder": "apple+rabbit+pig-8",
-        "label": "Apple → Rabbit → Pig"
+        "folder": "(2)horse+plushbear+chef-26",
+        "label": "Horse → Plushbear → Chef"
       },
       {
-        "folder": "horse+plushbear+chef-26",
-        "label": "Horse → Plushbear → Chef"
+        "folder": "(3)apple+sheep+Einstein-9",
+        "label": "Apple → Sheep → Einstein"
+      },
+      {
+        "folder": "(4)pig+rabbit+angel-29",
+        "label": "Pig → Rabbit → Angel"
+      },
+      {
+        "folder": "(6)rabbit+cow+greek_statue-23",
+        "label": "Rabbit → Cow → Greek Statue"
+      },
+      {
+        "folder": "(7)apple+rabbit+pig-8",
+        "label": "Apple → Rabbit → Pig"
       }
     ]
   },
