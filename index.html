@@ -38,43 +38,53 @@
           <h1 class="title is-1 publication-title">Stroke of Surprise: Progressive Semantic Illusions in Vector Sketching</h1>
           
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Anonymous Authors</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/huaish/" target="_blank">Huai-Hsun Cheng</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/sianglinzhang/" target="_blank">Siang-Ling Zhang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://yulunalexliu.github.io/" target="_blank">Yu-Lun Liu</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">1 - National Yang Ming Chiao Tung University, Taiwan</span>
+          </div>
+
+          <div class="has-text-centered">
+            <div class="publication-venue mt-2">SIGGRAPH 2026</div>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- Paper Link -->
               <span class="link-block">
-                <a class="external-link button is-normal is-rounded" href="./static/paper/stroke_of_surprise_paper.pdf" target="_blank">
+                <a href="https://arxiv.org/abs/2602.12280" target="_blank"
+                   class="external-link button is-normal is-rounded">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2602.12280" target="_blank"
+                   class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- arXiv Link -->
-              <!-- <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-dark" disabled>
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv (Coming Soon)</span>
-                </a>
-              </span> -->
-              <!-- Code Link -->
               <span class="link-block">
-                <a href="https://github.com/stroke-of-surprise/Stroke-Of-Surprise" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://github.com/stroke-of-surprise/Stroke-Of-Surprise" target="_blank"
+                   class="external-link button is-normal is-rounded">
                   <span class="icon">
-                      <i class="fab fa-github"></i>
+                    <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                 </a>
               </span>
-              <!-- Gallery Link -->
               <span class="link-block">
-                <a href="./pages/gallery.html" class="external-link button is-normal is-rounded is-link">
+                <a href="./pages/gallery.html"
+                   class="external-link button is-normal is-rounded">
                   <span class="icon">
-                      <i class="fas fa-images"></i>
+                    <i class="fas fa-images"></i>
                   </span>
                   <span>Gallery</span>
                 </a>
@@ -331,6 +341,132 @@
 </section>
 
 
+<!-- Qualitative Comparison Section -->
+<section class="section" id="qualitative-comparison">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Comparison</h2>
+        <div class="content has-text-justified">
+          <p>
+            We compare our method against three baselines: <b>SketchDreamer</b>, <b>Gemini</b>, and <b>SketchAgent</b>. For each concept pair, all methods share the same prompts. Our results demonstrate stronger dual-concept recognizability and more coherent structural integration.
+          </p>
+        </div>
+
+        <table class="qualitative-table">
+          <colgroup>
+            <col class="col-label">
+            <col class="col-method">
+            <col class="col-method">
+            <col class="col-method">
+            <col class="col-method">
+          </colgroup>
+          <thead>
+            <tr>
+              <th></th>
+              <th style="text-align:center;">SketchDreamer</th>
+              <th style="text-align:center;">Gemini</th>
+              <th style="text-align:center;">SketchAgent</th>
+              <th class="method-ours" style="text-align:center;">Ours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1: Chicken → Monkey -->
+            <tr>
+              <td class="row-label"><span class="row-label-rotate">Chicken → Monkey</span></td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/sketchDreamer-chicken+monkey-3/sketch_p1.png" alt="SketchDreamer Phase 1">
+                  <img src="./static/illusions/qualitative/sketchDreamer-chicken+monkey-3/sketch_p2.png" alt="SketchDreamer Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/gemini-chicken+monkey-2/sketch_p1.png" alt="Gemini Phase 1">
+                  <img src="./static/illusions/qualitative/gemini-chicken+monkey-2/sketch_p2.png" alt="Gemini Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/sketchAgent-chicken+monkey-4/sketch_p1.png" alt="SketchAgent Phase 1">
+                  <img src="./static/illusions/qualitative/sketchAgent-chicken+monkey-4/sketch_p2.png" alt="SketchAgent Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell highlight">
+                  <img src="./static/illusions/qualitative/ours-chicken+monkey-25/sketch_p1.png" alt="Ours Phase 1">
+                  <img src="./static/illusions/qualitative/ours-chicken+monkey-25/sketch_p2.png" alt="Ours Phase 2">
+                </div>
+              </td>
+            </tr>
+            <!-- Row 2: Owl → Angel -->
+            <tr>
+              <td class="row-label"><span class="row-label-rotate">Owl → Angel</span></td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/sketchDreamer-owl+angel-1/sketch_p1.png" alt="SketchDreamer Phase 1">
+                  <img src="./static/illusions/qualitative/sketchDreamer-owl+angel-1/sketch_p2.png" alt="SketchDreamer Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/gemini-owl+angel-7/sketch_p1.png" alt="Gemini Phase 1">
+                  <img src="./static/illusions/qualitative/gemini-owl+angel-7/sketch_p2.png" alt="Gemini Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/sketchAgent-owl+angel-4/sketch_p1.png" alt="SketchAgent Phase 1">
+                  <img src="./static/illusions/qualitative/sketchAgent-owl+angel-4/sketch_p2.png" alt="SketchAgent Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell highlight">
+                  <img src="./static/illusions/qualitative/ours-owl+angel-23/sketch_p1.png" alt="Ours Phase 1">
+                  <img src="./static/illusions/qualitative/ours-owl+angel-23/sketch_p2.png" alt="Ours Phase 2">
+                </div>
+              </td>
+            </tr>
+            <!-- Row 3: Rabbit → Elephant -->
+            <tr>
+              <td class="row-label"><span class="row-label-rotate">Rabbit → Elephant</span></td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/sketchDreamer-rabbit+elephant-3/sketch_p1.png" alt="SketchDreamer Phase 1">
+                  <img src="./static/illusions/qualitative/sketchDreamer-rabbit+elephant-3/sketch_p2.png" alt="SketchDreamer Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/gemini-rabbit+elephant-8/sketch_p1.png" alt="Gemini Phase 1">
+                  <img src="./static/illusions/qualitative/gemini-rabbit+elephant-8/sketch_p2.png" alt="Gemini Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell">
+                  <img src="./static/illusions/qualitative/sketchAgent-rabbit+elephant-1/sketch_p1.png" alt="SketchAgent Phase 1">
+                  <img src="./static/illusions/qualitative/sketchAgent-rabbit+elephant-1/sketch_p2.png" alt="SketchAgent Phase 2">
+                </div>
+              </td>
+              <td>
+                <div class="qualitative-cell highlight">
+                  <img src="./static/illusions/qualitative/ours-rabbit+elephant-16/sketch_p1.png" alt="Ours Phase 1">
+                  <img src="./static/illusions/qualitative/ours-rabbit+elephant-16/sketch_p2.png" alt="Ours Phase 2">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="has-text-centered" style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+          Each cell alternates between Phase 1 (prefix strokes) and Phase 2 (full strokes).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- BibTeX Section -->
 <!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -383,6 +519,7 @@ class SVGGallery {
     this.currentPage = 0;
     this.totalPages = Math.ceil(data.length / itemsPerPage);
     this.isAnimating = false;
+    this.autoInterval = null;
     
     this.wrapper = document.getElementById(wrapperId);
     this.prevBtn = document.getElementById(prevBtnId);
@@ -397,11 +534,30 @@ class SVGGallery {
     this.setupEventListeners();
     this.updateButtons();
     this.updatePageInfo();
+    this.startAutoAdvance();
   }
   
   setupEventListeners() {
     this.prevBtn.addEventListener('click', () => this.prevPage());
     this.nextBtn.addEventListener('click', () => this.nextPage());
+  }
+
+  startAutoAdvance(intervalMs = 8000) {
+    if (this.totalPages <= 1) return;
+
+    if (this.autoInterval) {
+      clearInterval(this.autoInterval);
+    }
+
+    this.autoInterval = setInterval(() => {
+      // If the page is animating, skip it to avoid lag
+      if (this.isAnimating) return;
+      // If the window is not in the current tab, skip it to avoid auto-playing
+      if (document.hidden) return;
+
+      const nextPage = (this.currentPage + 1) % this.totalPages;
+      this.slideTo(nextPage);
+    }, intervalMs);
   }
   
   renderAllPages() {
