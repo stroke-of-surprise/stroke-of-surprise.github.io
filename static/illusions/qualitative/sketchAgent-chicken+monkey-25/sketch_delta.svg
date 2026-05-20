@@ -1,0 +1,39 @@
+<svg width="612" height="612" xmlns="http://www.w3.org/2000/svg">
+<g id="s1" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 245.66 148.97 C 320.7047619047619 16.780952380952243 446.0380952380952 227.44761904761896 365.6571428571429 268.9714285714286 "/>
+<path d="M 365.66 268.97 C 291.29523809523795 350.0380952380951 165.96190476190472 224.70476190476188 246.3428571428572 149.65714285714287 "/>
+</g>
+<g id="s2" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 186.00 306.00 C 138.84444089711874 330.03703408093224 131.06419772793768 401.9629659190675 101.99999999999997 426.0000000000002 "/>
+</g>
+<g id="s3" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 426.00 306.00 C 473.15555910288174 330.03703408093224 480.9358022720618 401.9629659190675 510.0000000000003 426.0000000000002 "/>
+</g>
+<g id="s4" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 246.00 426.00 C 211.3765397610876 450.03703408093236 214.53209886396877 521.9629659190671 198.0 545.9999999999998 "/>
+</g>
+<g id="s5" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 366.00 426.00 C 400.6234602389128 450.03703408093236 397.4679011360303 521.9629659190671 413.9999999999999 545.9999999999998 "/>
+</g>
+<g id="s6" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 426.00 365.66 C 508.6666666666665 446.0380952380949 591.3333333333334 320.7047619047619 546.0 245.65714285714293 "/>
+</g>
+<g id="s7" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 270.00 210.00 L 270.0001 210.0001 "/>
+</g>
+<g id="s8" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 342.00 210.00 L 342.0001 210.0001 "/>
+</g>
+<g id="s9" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 294.00 234.00 Q 306.00000000000017 258.00000000000017 318.00000000000006 234.00000000000003 "/>
+</g>
+<g id="s10" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 282.00 258.00 Q 306.0000000000003 282.0000000000003 330.0 258.0 "/>
+</g>
+<g id="s11" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 78.00 426.00 L 78.0001 426.0001 "/>
+</g>
+<g id="s12" stroke="black" stroke-width="7.0" fill="none" stroke-linecap="round">
+<path d="M 534.00 426.00 L 534.0001 426.0001 "/>
+</g>
+</svg>
